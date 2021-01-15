@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  db:
+    image: "mysql:8.0.22"
+    container_name: k2mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: persvw
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes: 
+      - volk2mysql:/var/lib/mysql
+
+volumes:
+  volk2mysql:
+      
